@@ -20,7 +20,7 @@ void create_task(void)
 	xTaskCreate(led_task, "led_task", 128, NULL, 2, NULL );
 	xTaskCreate(key_task, "key_task", 128, NULL, 3, NULL );
 	xTaskCreate(lvgl_timer_task, "lvgl_timer_task", 512, NULL, 4, NULL );
-	xTaskCreate(lvgl_task, "lvgl_timer_task", 512, NULL, 4, NULL );
+	xTaskCreate(lvgl_task, "lvgl_task", 512, NULL, 4, NULL );
 	
 	taskEXIT_CRITICAL();            //ÍË³öÁÙ½çÇø
 	

@@ -158,15 +158,15 @@ void ST7789_Init(void)
     ST7789_WriteSmallData(0x19);			//	0.725v (default 0.75v for 0x20)
     ST7789_WriteCommand(0xC0);				//	LCMCTRL	
     ST7789_WriteSmallData (0x2C);			//	Default value
-    ST7789_WriteCommand (0xC2);				//	VDV and VRH command Enable
+    ST7789_WriteCommand (0xC2);			//	VDV and VRH command Enable
     ST7789_WriteSmallData (0x01);			//	Default value
-    ST7789_WriteCommand (0xC3);				//	VRH set
+    ST7789_WriteCommand (0xC3);			//	VRH set
     ST7789_WriteSmallData (0x12);			//	+-4.45v (defalut +-4.1v for 0x0B)
-    ST7789_WriteCommand (0xC4);				//	VDV set
+    ST7789_WriteCommand (0xC4);			//	VDV set
     ST7789_WriteSmallData (0x20);			//	Default value
-    ST7789_WriteCommand (0xC6);				//	Frame rate control in normal mode
+    ST7789_WriteCommand (0xC6);			//	Frame rate control in normal mode
     ST7789_WriteSmallData (0x0F);			//	Default value (60HZ)
-    ST7789_WriteCommand (0xD0);				//	Power control
+    ST7789_WriteCommand (0xD0);			//	Power control
     ST7789_WriteSmallData (0xA4);			//	Default value
     ST7789_WriteSmallData (0xA1);			//	Default value
 	/**************** Division line ****************/

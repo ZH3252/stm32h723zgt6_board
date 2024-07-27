@@ -125,9 +125,11 @@ int main(void)
 	lv_init();
 	lv_port_disp_init();
 	
-	//HAL_TIM_Base_Start_IT(&htim2);//开启内部定时器tim2
+	#if(USE_OS == 0)
+	HAL_TIM_Base_Start_IT(&htim2);//开启内部定时器tim2
+	#endif
   /* USER CODE END 2 */
-	create_task();
+	create_task();//创建任务
 	vTaskStartScheduler();          //开启任务调度
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
